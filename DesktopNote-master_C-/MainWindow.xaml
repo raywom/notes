@@ -1,0 +1,72 @@
+﻿<Window x:Name="Win_Main" x:Class="DesktopNote.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        xmlns:local="clr-namespace:DesktopNote"
+        Title="Desktop Note" Height="350" Width="300" ShowInTaskbar="False" AllowsTransparency="True" WindowStyle="None" Background="{x:Null}"
+        ResizeMode="CanResizeWithGrip" UseLayoutRounding="True"
+        MouseEnter="Win_Main_MouseEnter" Loaded="Win_Main_Loaded">
+    <!--<Window.CacheMode>
+        <BitmapCache/>
+    </Window.CacheMode>-->
+    <Window.Resources>
+        <ContextMenu x:Key="TrayMenu">
+            <MenuItem Header="{StaticResource menu_newnote}" Click="TM_NewNote_Click"/>
+            <MenuItem Header="{StaticResource menu_opennote}" Click="TM_OpenNote_Click"/>
+            <MenuItem Header="{StaticResource menu_reset_positions}" Click="TM_ResetPos_Click"/>
+            <MenuItem Header="{StaticResource menu_exit}" Click="TM_Exit_Click"/>
+        </ContextMenu>
+        <local:ThicknessConverter x:Key="ThicknessConverter"/>
+    </Window.Resources>
+    <Grid>
+        <Rectangle x:Name="Rec_BG" Fill="#FFFFF7C5" Margin="10" RadiusX="12" RadiusY="12"
+                   MouseLeftButtonDown="Rec_BG_MouseLeftButtonDown" MouseLeftButtonUp="Rec_BG_MouseLeftButtonUp" MouseMove="Rec_BG_MouseMove" Cursor="SizeAll">
+            <Rectangle.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="8"/>
+            </Rectangle.Effect>
+        </Rectangle>
+        <RichTextBox x:Name="RTB_Main" Margin="20" Background="{x:Null}" BorderBrush="{x:Null}" AcceptsTab="True" BorderThickness="0" IsInactiveSelectionHighlightEnabled="True"
+                     TextChanged="RTB_Main_TextChanged" PreviewKeyDown="RTB_Main_PreviewKeyDown" PreviewMouseWheel="RTB_Main_PreviewMouseWheel"
+                     GotKeyboardFocus="RTB_Main_GotKeyboardFocus"
+                     ContextMenuOpening="RTB_Main_ContextMenuOpening" PreviewMouseDown="RTB_Main_PreviewMouseDown">
+            <!--<wtk:RichTextBoxFormatBarManager.FormatBar>
+                <wtk:RichTextBoxFormatBar/>
+            </wtk:RichTextBoxFormatBarManager.FormatBar>-->
+            <RichTextBox.Resources>
+                <SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightBrushKey}" Color="{StaticResource {x:Static SystemColors.HighlightColorKey}}"/>
+                <Style TargetType="{x:Type List}">
+                    <Setter Property="Margin" Value="0"/>
+                    <Setter Property="Padding" Value="{Binding
+                        RelativeSource={RelativeSource AncestorType=RichTextBox}, Path=FontSize, Mode=OneWay,
+                        Converter={StaticResource ThicknessConverter}, ConverterParameter='1.5 0 0 0'}"/>
+                    <!--marker padding according to the type of the marker. if the marker is not a fixed length character, give more space to the marker-->
+                    <Style.Triggers>
+                        <Trigger Property="MarkerStyle" Value="Decimal">
+                            <Setter Property="Padding" Value="{Binding
+                                RelativeSource={RelativeSource AncestorType=RichTextBox}, Path=FontSize, Mode=OneWay,
+                                Converter={StaticResource ThicknessConverter}, ConverterParameter='2.5 0 0 0'}"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+                <Style TargetType="{x:Type Paragraph}">
+                    <Setter Property="Margin" Value="0"/>
+                </Style>
+            </RichTextBox.Resources>
+            <RichTextBox.ContextMenu>
+                <!--this is necessary for not showing the default menu.-->
+                <ContextMenu/>
+            </RichTextBox.ContextMenu>
+
+            <FlowDocument>
+                <List>
+                    <ListItem>
+                        <Paragraph>
+                            <Run Text="{StaticResource default_note_text}"/>
+                        </Paragraph>
+                    </ListItem>
+                </List>
+            </FlowDocument>
+        </RichTextBox>
+        <TextBlock x:Name="TB_Status" Text="{StaticResource status_saved}" Margin="18" VerticalAlignment="Bottom" HorizontalAlignment="Right" Opacity="0.5" FontStyle="Italic" FontSize="10" Visibility="Hidden"/>
+    </Grid>
+</Window>
