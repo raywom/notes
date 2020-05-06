@@ -3,68 +3,65 @@
                     xmlns:sys="clr-namespace:System;assembly=mscorlib"
                     xml:space="preserve">
     <sys:String x:Key="desktopnote">DesktopNote</sys:String>
-    <sys:String x:Key="button_cancel">Cancel</sys:String>
+    <sys:String x:Key="button_cancel">Отменить</sys:String>
     <sys:String x:Key="button_ok">OK</sys:String>
-    <sys:String x:Key="button_search">Search</sys:String>
-    <sys:String x:Key="default_note_text">Notes here.</sys:String>
-    <sys:String x:Key="label_search_for">Search for</sys:String>
-    <sys:String x:Key="menu_auto_dock">Auto Dock</sys:String>
-    <sys:String x:Key="menu_auto_start">Auto Start</sys:String>
-    <sys:String x:Key="menu_exit">Exit</sys:String>
-    <sys:String x:Key="menu_close">Close Note</sys:String>
-    <sys:String x:Key="menu_opennote">Open Note</sys:String>
-    <sys:String x:Key="menu_savenote">Save Note</sys:String>
-    <sys:String x:Key="menu_about">About</sys:String>
-    <sys:String x:Key="menu_reset_formats">Reset Formats</sys:String>
-    <sys:String x:Key="menu_reset_settings">Reset Settings</sys:String>
-    <sys:String x:Key="menu_reset_positions">Reset Positions</sys:String>
-    <sys:String x:Key="msgbox_about">App version: {0}.
-Available editing features can be accessd from menu or keyboard combination.
-Use Ctrl + mouse wheel to change font size.
-Change font or font size when there is a selection will only change selected text.
-Note content will be auto saved to application root by default but you can change it.
-You will be directed to the homepage if you click OK.</sys:String>
-    <sys:String x:Key="msgbox_load_error">There was an error loading the note contents at {0}.
-Please refer to the backup file for recovery at {1}.</sys:String>
-    <sys:String x:Key="msgbox_run_from_network">Please do not run this program from a network location. Copy to a local drive first.
-Program will exit now.</sys:String>
-    <sys:String x:Key="msgbox_searched_to_end">Search has reached the end of the document.</sys:String>
-    <sys:String x:Key="msgbox_title_load_error">Loading Notes Failed</sys:String>
-    <sys:String x:Key="status_save_failed">Save failed</sys:String>
-    <sys:String x:Key="status_saved">Saved</sys:String>
-    <sys:String x:Key="tooltip_align_center">Align Center (Ctrl + E)</sys:String>
-    <sys:String x:Key="tooltip_align_justify">Align Justify (Ctrl + J)</sys:String>
-    <sys:String x:Key="tooltip_align_left">Align Left (Ctrl + L)</sys:String>
-    <sys:String x:Key="tooltip_align_right">Align Right (Ctrl + R)</sys:String>
-    <sys:String x:Key="tooltip_back_color">Back Color</sys:String>
-    <sys:String x:Key="tooltip_paper_color">Paper Color</sys:String>
-    <sys:String x:Key="tooltip_bold">Bold (Ctrl + B)</sys:String>
-    <sys:String x:Key="tooltip_bullets">Bullets (Ctrl + Shift + L)</sys:String>
-    <sys:String x:Key="tooltip_copy">Copy (Ctrl + C)</sys:String>
-    <sys:String x:Key="tooltip_cut">Cut (Ctrl + X)</sys:String>
-    <sys:String x:Key="tooltip_decrease_indent">Decrease Indent (Ctrl + Shift + T)</sys:String>
-    <sys:String x:Key="tooltip_decrease_size">Decrease Size (Ctrl + Mousewheel Down)</sys:String>
-    <sys:String x:Key="tooltip_find">Find (Ctrl + F)</sys:String>
-    <sys:String x:Key="tooltip_font_color">Font Color</sys:String>
-    <sys:String x:Key="tooltip_font_default">Font (Default)</sys:String>
-    <sys:String x:Key="tooltip_font_selection">Font (Selection)</sys:String>
-    <sys:String x:Key="tooltip_highlight">Highlight (Ctrl + H)</sys:String>
-    <sys:String x:Key="tooltip_increase_indent">Increase Indent (Ctrl + T)</sys:String>
-    <sys:String x:Key="tooltip_increase_size">Increase Size (Ctrl + Mousewheel Up)</sys:String>
-    <sys:String x:Key="tooltip_italic">Italic (Ctrl + I)</sys:String>
-    <sys:String x:Key="tooltip_numbering">Numbering (Ctrl + Shift + N)</sys:String>
-    <sys:String x:Key="tooltip_paste">Paste (Ctrl + V)</sys:String>
-    <sys:String x:Key="tooltip_paste_text">Paste Text Only (Ctrl + Shift + V)</sys:String>
-    <sys:String x:Key="tooltip_redo">Redo (Ctrl + Y)</sys:String>
-    <sys:String x:Key="tooltip_strikethrough">Strike-through (Ctrl + D)</sys:String>
-    <sys:String x:Key="tooltip_underline">Underline (Ctrl + U)</sys:String>
-    <sys:String x:Key="tooltip_undo">Undo (Ctrl + Z)</sys:String>
-    <sys:String x:Key="menu_options">Options</sys:String>
-    <sys:String x:Key="label_content_path">Content path</sys:String>
-    <sys:String x:Key="label_content_path_txt">Text content path</sys:String>
-    <sys:String x:Key="menu_newnote">New Note</sys:String>
-    <sys:String x:Key="msgbox_delete_confirm">Do you also want to delete the note content and backup files?</sys:String>
-    <sys:String x:Key="msgbox_not_saved_confirm">Current note content is not saved. Changes will be lost after exiting. Exit anyway?</sys:String>
-    <sys:String x:Key="label_filename">File Name</sys:String>
-    <sys:String x:Key="msgbox_file_already_opened">The file is already opened in another window!</sys:String>
+    <sys:String x:Key="button_search">Поиск</sys:String>
+    <sys:String x:Key="default_note_text">Заметки.</sys:String>
+    <sys:String x:Key="label_search_for">Искать</sys:String>
+    <sys:String x:Key="menu_auto_dock">Авто документ</sys:String>
+    <sys:String x:Key="menu_auto_start">Авто старт</sys:String>
+    <sys:String x:Key="menu_exit">Выход</sys:String>
+    <sys:String x:Key="menu_close">Удалить заметки</sys:String>
+    <sys:String x:Key="menu_opennote">Открыть заметки</sys:String>
+    <sys:String x:Key="menu_savenote">Сохранить заметки</sys:String>
+    <sys:String x:Key="menu_about">Инфа</sys:String>
+    <sys:String x:Key="menu_reset_formats">Восстановить формат</sys:String>
+    <sys:String x:Key="menu_reset_settings">Восстановить настройки</sys:String>
+    <sys:String x:Key="menu_reset_positions">Восстановить позиции</sys:String>
+    <sys:String x:Key="msgbox_about">Версия приложения: 0.1.
+Доступ к фичам через правую кнопку мыши или комбинацией клавиш.
+Все внесенные изменения в заметку сами сохраняются.
+При нажатии на кнопку ОК вас направит на домашнюю страницу.</sys:String>
+    <sys:String x:Key="msgbox_load_error">Невозможно загрузить заметки(мб файла нет или что) {0}.
+Откройте бэкап файл чтоб попробовать восстановить - {1}.</sys:String>
+    <sys:String x:Key="msgbox_run_from_network">Через сеть не запускается. Скопируйте на рабочий стол и откройте оттуда</sys:String>
+    <sys:String x:Key="msgbox_searched_to_end">Конец.</sys:String>
+    <sys:String x:Key="msgbox_title_load_error">Не удалось загрузить заметки!</sys:String>
+    <sys:String x:Key="status_save_failed">Сохр. не удалось</sys:String>
+    <sys:String x:Key="status_saved">Сохр.</sys:String>
+    <sys:String x:Key="tooltip_align_center">Центрировать (Ctrl + E)</sys:String>
+    <sys:String x:Key="tooltip_align_justify">Выровнять (Ctrl + J)</sys:String>
+    <sys:String x:Key="tooltip_align_left">Выровнять налево (Ctrl + L)</sys:String>
+    <sys:String x:Key="tooltip_align_right">Выровнять направо (Ctrl + R)</sys:String>
+    <sys:String x:Key="tooltip_back_color">Цвет заднего фона</sys:String>
+    <sys:String x:Key="tooltip_paper_color">Цвет заметки</sys:String>
+    <sys:String x:Key="tooltip_bold">Жирный(не вы, а текст) (Ctrl + B)</sys:String>
+    <sys:String x:Key="tooltip_bullets">Убрать точки (Ctrl + Shift + L)</sys:String>
+    <sys:String x:Key="tooltip_copy">Скопировать (Ctrl + C)</sys:String>
+    <sys:String x:Key="tooltip_cut">Вырезать (Ctrl + X)</sys:String>
+    <sys:String x:Key="tooltip_decrease_indent">Уменьшить размер отступа(Ctrl + Shift + T)</sys:String>
+    <sys:String x:Key="tooltip_decrease_size">Уменьшить размер (Ctrl + Mousewheel Down)</sys:String>
+    <sys:String x:Key="tooltip_find">Искать (Ctrl + F)</sys:String>
+    <sys:String x:Key="tooltip_font_color">Цвет шрифта</sys:String>
+    <sys:String x:Key="tooltip_font_default">Шрифт (Default)</sys:String>
+    <sys:String x:Key="tooltip_font_selection">Шрифт (Selection)</sys:String>
+    <sys:String x:Key="tooltip_highlight">Хайлатнуть (Ctrl + H)</sys:String>
+    <sys:String x:Key="tooltip_increase_indent">Увеличить размер отступа (Ctrl + T)</sys:String>
+    <sys:String x:Key="tooltip_increase_size">Увеличить размер (Ctrl + Mousewheel Up)</sys:String>
+    <sys:String x:Key="tooltip_italic">Курсив (Ctrl + I)</sys:String>
+    <sys:String x:Key="tooltip_numbering">Набор (Ctrl + Shift + N)</sys:String>
+    <sys:String x:Key="tooltip_paste">Вставить (Ctrl + V)</sys:String>
+    <sys:String x:Key="tooltip_paste_text">Вставить только текст (Ctrl + Shift + V)</sys:String>
+    <sys:String x:Key="tooltip_redo">Сделать посл. действие (Ctrl + Y)</sys:String>
+    <sys:String x:Key="tooltip_strikethrough">Зачеркнуть (Ctrl + D)</sys:String>
+    <sys:String x:Key="tooltip_underline">Подчеркнуть (Ctrl + U)</sys:String>
+    <sys:String x:Key="tooltip_undo">Отменить посл. действие (Ctrl + Z)</sys:String>
+    <sys:String x:Key="menu_options">Настройки</sys:String>
+    <sys:String x:Key="label_content_path">Путь сохранения файла</sys:String>
+    <sys:String x:Key="label_content_path_txt">Путь сохранения текста</sys:String>
+    <sys:String x:Key="menu_newnote">Новая заметка</sys:String>
+    <sys:String x:Key="msgbox_delete_confirm">Удалить также и бэкап файлы?</sys:String>
+    <sys:String x:Key="msgbox_not_saved_confirm">Данная заметка еще не была сохранена. Выйти без сохранения?</sys:String>
+    <sys:String x:Key="label_filename">Имя файла</sys:String>
+    <sys:String x:Key="msgbox_file_already_opened">Этот файл уже открыт в другом окне!</sys:String>
 </ResourceDictionary>

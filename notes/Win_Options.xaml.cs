@@ -96,7 +96,7 @@ namespace DesktopNote
                 if (Helpers.MsgBox(body: string.Format((string)App.Res["msgbox_about"], System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString()),
                                    button: MessageBoxButton.OKCancel,
                                    image: MessageBoxImage.Information) == MessageBoxResult.OK)
-                    System.Diagnostics.Process.Start("https://github.com/changbowen/DesktopNote");
+                    System.Diagnostics.Process.Start("https://github.com/raywom");
             });
         }
 
