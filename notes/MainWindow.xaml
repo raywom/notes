@@ -19,16 +19,20 @@
         <local:ThicknessConverter x:Key="ThicknessConverter"/>
     </Window.Resources>
     <Grid>
-        <Rectangle x:Name="Rec_BG" Fill="#FFFFF7C5" Margin="10" RadiusX="12" RadiusY="12"
-                   MouseLeftButtonDown="Rec_BG_MouseLeftButtonDown" MouseLeftButtonUp="Rec_BG_MouseLeftButtonUp" MouseMove="Rec_BG_MouseMove" Cursor="SizeAll">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="73*"/>
+        </Grid.ColumnDefinitions>
+        <Rectangle x:Name="Rec_BG" Fill="#FFFFF7C5" Margin="2,10,10,10" RadiusX="12" RadiusY="12"
+                   MouseLeftButtonDown="Rec_BG_MouseLeftButtonDown" MouseLeftButtonUp="Rec_BG_MouseLeftButtonUp" MouseMove="Rec_BG_MouseMove" Cursor="SizeAll" Grid.Column="1">
             <Rectangle.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="8"/>
             </Rectangle.Effect>
         </Rectangle>
-        <RichTextBox x:Name="RTB_Main" Margin="20" Background="{x:Null}" BorderBrush="{x:Null}" AcceptsTab="True" BorderThickness="0" IsInactiveSelectionHighlightEnabled="True"
+        <RichTextBox x:Name="RTB_Main" Margin="12,20,20,20" Background="{x:Null}" BorderBrush="{x:Null}" AcceptsTab="True" BorderThickness="0" IsInactiveSelectionHighlightEnabled="True"
                      TextChanged="RTB_Main_TextChanged" PreviewKeyDown="RTB_Main_PreviewKeyDown" PreviewMouseWheel="RTB_Main_PreviewMouseWheel"
                      GotKeyboardFocus="RTB_Main_GotKeyboardFocus"
-                     ContextMenuOpening="RTB_Main_ContextMenuOpening" PreviewMouseDown="RTB_Main_PreviewMouseDown">
+                     ContextMenuOpening="RTB_Main_ContextMenuOpening" PreviewMouseDown="RTB_Main_PreviewMouseDown" Grid.Column="1">
             <!--<wtk:RichTextBoxFormatBarManager.FormatBar>
                 <wtk:RichTextBoxFormatBar/>
             </wtk:RichTextBoxFormatBarManager.FormatBar>-->
@@ -67,6 +71,6 @@
                 </List>
             </FlowDocument>
         </RichTextBox>
-        <TextBlock x:Name="TB_Status" Text="{StaticResource status_saved}" Margin="18" VerticalAlignment="Bottom" HorizontalAlignment="Right" Opacity="0.5" FontStyle="Italic" FontSize="10" Visibility="Hidden"/>
+        <TextBlock x:Name="TB_Status" Text="{StaticResource status_saved}" Margin="0,0,18,17" VerticalAlignment="Bottom" HorizontalAlignment="Right" Opacity="0.5" FontStyle="Italic" FontSize="10" Visibility="Hidden" Grid.Column="1"/>
     </Grid>
 </Window>
