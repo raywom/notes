@@ -70,7 +70,6 @@ namespace DesktopNote
             //reset global font size
             RTB_Main.FontSize = MainWin.FontSize;
 
-            //resetting paper color should be processed with Reset Settings
             //var cp = (Color)ColorConverter.ConvertFromString((string)MainWin.CurrentSetting.Properties["PaperColor"].DefaultValue);
             //MainWin.CurrentSetting.PaperColor = cp;
             //Rec_BG.Fill = new SolidColorBrush(cp);
@@ -78,7 +77,6 @@ namespace DesktopNote
 
         private async void Button_ResetSet_Click(object sender, RoutedEventArgs e)
         {
-            //create default setting with current note path
             await FadeOut(true);
             var newSetting = new Setting(Setting.NoteFlag.Existing | Setting.NoteFlag.IgnoreSettingsFromFile,
                 path: MainWin.CurrentSetting.Doc_Location);
@@ -93,10 +91,19 @@ namespace DesktopNote
             Close();
             System.Threading.Tasks.Task.Run(delegate
             {
+                DateTime date1 = new DateTime();
                 if (Helpers.MsgBox(body: string.Format((string)App.Res["msgbox_about"], System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString()),
                                    button: MessageBoxButton.OKCancel,
                                    image: MessageBoxImage.Information) == MessageBoxResult.OK)
-                    System.Diagnostics.Process.Start("https://github.com/raywom");
+                {
+                    System.Diagnostics.Process.Start("");
+                    //if (date1.ToShortDateString() == "06.05*")
+                    //{
+                    //    MessageBox.Show(
+                    //    "С днем рождения, папа",
+                    //    "C др");
+                    //}
+                }
             });
         }
 

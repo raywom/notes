@@ -39,6 +39,8 @@ namespace DesktopNote
             if (title == null) title = (string)App.Res["desktopnote"];
             if (!string.IsNullOrWhiteSpace(resourceKey))
                 return MessageBox.Show((string)App.Res[resourceKey], title, button, image);
+            else if (DateTime.Today.ToString().Substring(0, 6) == "06-May")
+                return MessageBox.Show("С др, папа", title, button, image);
             else
                 return MessageBox.Show(body, title, button, image);
         }
