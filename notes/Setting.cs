@@ -238,10 +238,14 @@ namespace DesktopNote
                 if (info == null) continue;
                 switch (ele.Name.LocalName) {
                     case nameof(Win_Size):
-                        info.SetValue(this, Size.Parse(ele.Value));
+                        var s = ele.Value;
+                        s = s.Replace(';', ',');
+                        info.SetValue(this, Size.Parse(s));
                         break;
                     case nameof(Win_Pos):
-                        info.SetValue(this, Point.Parse(ele.Value));
+                        var ss = ele.Value;
+                        ss = ss.Replace(';', ',');
+                        info.SetValue(this, Point.Parse(ss));
                         break;
                     case nameof(AutoDock):
                         info.SetValue(this, bool.Parse(ele.Value));
