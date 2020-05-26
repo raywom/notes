@@ -18,6 +18,7 @@
         </ContextMenu>
         <local:ThicknessConverter x:Key="ThicknessConverter"/>
     </Window.Resources>
+    <!--flex-->
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="2*"/>
